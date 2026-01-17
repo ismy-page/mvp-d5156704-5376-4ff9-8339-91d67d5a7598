@@ -430,3 +430,89 @@ button.pill {
     padding: 18px;
   }
 }
+
+/* Simulation styles */
+.simulator {
+  display: grid;
+  gap: 16px;
+}
+
+.sim-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.select {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.select select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+  font: inherit;
+}
+
+.sim-panels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sim-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 10px;
+}
+
+.sim-card textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 120px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font: inherit;
+}
+
+.sim-meta {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.trainer-feedback {
+  background: rgba(108, 99, 255, 0.06);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.metrics {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .sim-panels {
+    grid-template-columns: 1fr;
+  }
+}
+

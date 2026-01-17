@@ -24,11 +24,12 @@
         <nav class="nav-links">
           <a href="#features">Features</a>
           <a href="#story">Story</a>
+          <a href="#simulation">Simulation</a>
           <a href="#cta">Pricing</a>
         </nav>
         <div class="nav-actions">
           <a class="ghost" href="#features">Explore</a>
-          <a class="pill" href="#cta">Start free</a>
+          <a class="pill" href="#simulation">Practice now</a>
         </div>
       </header>
 
@@ -140,6 +141,63 @@
           </div>
         </section>
 
+        <section id="simulation" class="section">
+          <div class="section-head">
+            <p class="eyebrow">Practice lab</p>
+            <h2>Interactive customer simulation with real-time trainer feedback.</h2>
+            <p class="muted">
+              Role‑play beauty advisory scenarios inspired by L’Oréal best practices. Type your response and get coaching as you go.
+            </p>
+          </div>
+
+          <div class="simulator">
+            <div class="sim-controls">
+              <label class="select">
+                <span>Scenario</span>
+                <select id="scenarioSelect" aria-label="Choose scenario">
+                  <option value="skincare_beginner">Skincare beginner with sensitive skin</option>
+                  <option value="makeup_shade">Finding the right foundation shade</option>
+                  <option value="hair_frizz">Taming frizz and protecting color</option>
+                </select>
+              </label>
+              <button class="ghost" id="suggestBtn" type="button">Suggest reply</button>
+            </div>
+
+            <div class="sim-panels">
+              <div class="sim-card">
+                <p class="eyebrow">Customer</p>
+                <p id="customerPrompt" class="muted">
+                  Hi! I’m just getting into skincare. My skin is a bit sensitive and I want a simple routine. Any advice?
+                </p>
+              </div>
+
+              <div class="sim-card">
+                <p class="eyebrow">Your response</p>
+                <textarea id="advisorInput" rows="5" maxlength="280" placeholder="Write your reply…"></textarea>
+                <div class="sim-meta">
+                  <span id="charCount">0/280</span>
+                </div>
+              </div>
+
+              <div class="sim-card trainer">
+                <p class="eyebrow">Virtual trainer</p>
+                <div id="trainerFeedback" class="trainer-feedback" aria-live="polite">
+                  Start typing to see coaching tips…
+                </div>
+                <ul class="metrics">
+                  <li>Empathy: <span id="scoreEmpathy">0</span>/5</li>
+                  <li>Questions: <span id="scoreQuestions">0</span></li>
+                  <li>Product specificity: <span id="scoreProduct">0</span>/5</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="small muted">
+              Tips: Use empathetic language, ask open‑ended questions, and recommend specific, suitable products. Avoid medical claims.
+            </p>
+          </div>
+        </section>
+
         <section id="cta" class="section cta">
           <div class="cta-inner">
             <div>
@@ -166,3 +224,4 @@
     <script src="./script.js" defer></script>
   </body>
 </html>
+
